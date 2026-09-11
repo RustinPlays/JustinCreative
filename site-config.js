@@ -7,5 +7,5 @@ window.JUSTIN_SITE = {
     { name: "AV Planner", description: "Plan rooms, devices and signal flow.", url: "https://rustinplays.github.io/AV-Planner/" },
     { name: "Stage Deck Calculator", description: "Estimate deck layouts and materials.", url: "https://rustinplays.github.io/Stage-Deck-Calculator/" }
   ],
-  merch: { shopUrl: "https://rustinplays.shop", collection: "all" }
+  merch: { shopUrl: "https://justincreative-shop.fourthwall.com/en-nzd", collection: "all" }
 };

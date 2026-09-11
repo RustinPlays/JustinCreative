@@ -13,13 +13,121 @@
   <link rel="stylesheet" href="styles.css" />
   <script src="site-config.js" defer></script>
   <script src="script.js" defer></script>
+  <!-- Search and sharing metadata -->
+  <link rel="canonical" href="https://justincreative.tech/photography" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Justin Creative" />
+  <meta property="og:locale" content="en_NZ" />
+  <meta property="og:title" content="Photography — Justin Creative | Auckland" />
+  <meta property="og:description" content="Professional photography services in Auckland. Events, portraits, live music and more. Captured with creative vision and technical precision." />
+  <meta property="og:url" content="https://justincreative.tech/photography" />
+  <meta property="og:image" content="https://justincreative.tech/assets/branding/social-card.png" />
+  <meta property="og:image:secure_url" content="https://justincreative.tech/assets/branding/social-card.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Justin Creative: creative work, technical thinking. Photography, video, design, lighting and AV in Auckland." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Photography — Justin Creative | Auckland" />
+  <meta name="twitter:description" content="Professional photography services in Auckland. Events, portraits, live music and more. Captured with creative vision and technical precision." />
+  <meta name="twitter:image" content="https://justincreative.tech/assets/branding/social-card.png" />
+  <meta name="twitter:image:alt" content="Justin Creative: creative work, technical thinking. Photography, video, design, lighting and AV in Auckland." />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://justincreative.tech/#organization",
+      "name": "Justin Creative",
+      "url": "https://justincreative.tech/",
+      "email": "Justin.Oshea135@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://justincreative.tech/assets/branding/justin-creative-wordmark.png",
+        "width": 2172,
+        "height": 724
+      },
+      "image": "https://justincreative.tech/assets/branding/social-card.png",
+      "description": "Photography, video, graphic design, event lighting and AV technical support in Auckland, New Zealand.",
+      "founder": {
+        "@id": "https://justincreative.tech/#justin"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Auckland, New Zealand"
+        },
+        {
+          "@type": "Place",
+          "name": "Hibiscus Coast, New Zealand"
+        },
+        {
+          "@type": "Place",
+          "name": "North Shore, Auckland, New Zealand"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/justin.oshea_creative/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://justincreative.tech/#justin",
+      "name": "Justin O'Shea",
+      "url": "https://justincreative.tech/#about-title",
+      "image": "https://justincreative.tech/assets/images/Justin.png",
+      "jobTitle": "Creative designer and AV technician",
+      "worksFor": {
+        "@id": "https://justincreative.tech/#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://justincreative.tech/#website",
+      "url": "https://justincreative.tech/",
+      "name": "Justin Creative",
+      "publisher": {
+        "@id": "https://justincreative.tech/#organization"
+      },
+      "inLanguage": "en-NZ"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://justincreative.tech/photography#webpage",
+      "url": "https://justincreative.tech/photography",
+      "name": "Photography — Justin Creative | Auckland",
+      "description": "Professional photography services in Auckland. Events, portraits, live music and more. Captured with creative vision and technical precision.",
+      "isPartOf": {
+        "@id": "https://justincreative.tech/#website"
+      },
+      "about": {
+        "@id": "https://justincreative.tech/#organization"
+      },
+      "inLanguage": "en-NZ",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://justincreative.tech/assets/branding/social-card.png",
+        "width": 1200,
+        "height": 630,
+        "caption": "Justin Creative: creative work, technical thinking. Photography, video, design, lighting and AV in Auckland."
+      }
+    }
+  ]
+}
+  </script>
+  <!-- End search and sharing metadata -->
 </head>
 <body data-page="photography">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header is-solid" data-header>
     <a class="brand" href="index.html" aria-label="Justin Creative home"><img src="assets/branding/justin-creative-wordmark.png" alt="Justin Creative" width="2172" height="724" /></a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span class="sr-only">Open navigation</span></button>
-    <nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="index.html#creative">Creative</a><a href="lighting.html">Lighting</a><a href="av.html">AV + Tools</a><a href="https://rustinplays.shop">Merch</a></nav>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <div class="nav-creative"><a class="is-active" href="creative.html">Creative Work</a><details class="creative-dropdown"><summary aria-label="Creative Work pages"><span aria-hidden="true">⌄</span></summary><div class="creative-menu"><a class="is-active" aria-current="page" href="photography.html">Photography</a><a href="videography.html">Video &amp; Editing</a><a href="creative.html#design">Graphic Design</a></div></details></div>
+      <a href="lighting.html">Lighting</a><a href="av.html">AV + Tools</a><a class="nav-booking" href="booking.html">Enquire / Book</a>
+    </nav>
     <a class="header-cta" href="booking.html?type=booking&amp;service=Photography">Enquire / Book</a>
   </header>
 
@@ -34,34 +142,8 @@
     </section>
 
     <section class="service-work-section" aria-labelledby="work-title">
-      <div class="section-intro reveal"><h2 id="work-title">Recent Work</h2></div>
-      <div class="work-gallery">
-        <figure class="work-item reveal">
-          <img src="assets/images/photography-1.jpg" alt="Photograph 1" width="500" height="400" loading="lazy" />
-          <figcaption>Live music photography</figcaption>
-        </figure>
-        <figure class="work-item reveal">
-          <img src="assets/images/photography-2.jpg" alt="Photograph 2" width="500" height="400" loading="lazy" />
-          <figcaption>Event photography</figcaption>
-        </figure>
-        <figure class="work-item reveal">
-          <img src="assets/images/photography-3.jpg" alt="Photograph 3" width="500" height="400" loading="lazy" />
-          <figcaption>Portrait work</figcaption>
-        </figure>
-        <figure class="work-item reveal">
-          <img src="assets/images/photography-4.jpg" alt="Photograph 4" width="500" height="400" loading="lazy" />
-          <figcaption>Documentary style</figcaption>
-        </figure>
-        <figure class="work-item reveal">
-          <img src="assets/images/photography-5.jpg" alt="Photograph 5" width="500" height="400" loading="lazy" />
-          <figcaption>Live performance</figcaption>
-        </figure>
-        <figure class="work-item reveal">
-          <img src="assets/images/photography-6.jpg" alt="Photograph 6" width="500" height="400" loading="lazy" />
-          <figcaption>Detail and moments</figcaption>
-        </figure>
-      </div>
-      <p class="gallery-note reveal">For more work, visit <a href="https://justinoshea135.shootproof.com/" target="_blank" rel="noopener">my photography portfolio →</a></p>
+      <div class="section-intro reveal"><h2 id="work-title">See my photography</h2><p>Browse my photography portfolio, or tell me about your shoot and ask for examples relevant to your brief.</p></div>
+      <a class="button button-dark" href="https://justinoshea135.shootproof.com/" target="_blank" rel="noopener">Open photography portfolio <span aria-hidden="true">&nearr;</span></a>
     </section>
 
     <section class="service-info-section" aria-labelledby="info-title">
@@ -86,6 +168,18 @@
       </div>
     </section>
 
+    <section class="lighting-faq-section" aria-labelledby="photography-faq-title">
+      <div class="section-intro"><h2 id="photography-faq-title">Good to know</h2><p>A few details to help plan your shoot.</p></div>
+      <div class="lighting-faq-list">
+        <details><summary>How long does editing take?</summary><p>Turnaround depends on the shoot and number of images. I will confirm a delivery date with your quote. If you need images for an announcement or a particular deadline, include that in your enquiry.</p></details>
+        <details><summary>How will I receive my photographs?</summary><p>I supply edited digital images. We will agree the online gallery or download method, image selection and file sizes before the shoot, including any versions you need for print or social media.</p></details>
+        <details><summary>Are revisions or extra retouching included?</summary><p>I will set out the editing scope and any included revision rounds in your quote. Let me know about specific retouching requirements before booking; extra edits can be discussed and quoted separately.</p></details>
+        <details><summary>Do you supply RAW files?</summary><p>The usual deliverable is the finished, edited photographs. If you need RAW files or unedited images, mention this before booking so we can agree whether they can be supplied and on what terms.</p></details>
+        <details><summary>Where can I use the photographs?</summary><p>Tell me how you plan to use them, such as personal prints, social media, a website or advertising. I will confirm the included usage and licensing in the quote. If another business needs to use the images, include that too.</p></details>
+        <details><summary>Can you travel, and what if the shoot runs late?</summary><p>Send me the location and schedule. I will confirm availability, any travel costs, the booked hours and overtime terms in the quote. If you need longer on the day, we will agree any extension and cost before continuing.</p></details>
+      </div>
+    </section>
+
     <section class="service-cta" aria-labelledby="cta-title">
       <h2 id="cta-title">Ready to book?</h2>
       <a class="button button-line" href="booking.html?type=booking&amp;service=Photography">Enquire about photography <span aria-hidden="true">↗</span></a>
@@ -97,11 +191,11 @@
       <div class="footer-note"><img src="assets/branding/creative-mark.png" alt="" aria-hidden="true" /><p><strong>Justin Creative</strong><span>Creative work, kept honest.</span></p></div>
       <div class="footer-info">
         <p><strong>Auckland, New Zealand</strong><br />Hibiscus Coast &amp; North Shore</p>
-        <p><a href="mailto:Justin.Oshea135@gmail.com">Justin.Oshea135@gmail.com</a><br /><a href="tel:+642751860656">027 518 6656</a></p>
+        <p><a href="mailto:Justin.Oshea135@gmail.com">Justin.Oshea135@gmail.com</a><br /><a href="tel:+64275186656">027 518 6656</a></p>
         <p><a href="https://www.instagram.com/justin.oshea_creative/" target="_blank" rel="noopener">Instagram</a></p>
       </div>
     </div>
-    <nav aria-label="Footer navigation"><a href="index.html#creative">Creative</a><a href="lighting.html">Lighting</a><a href="av.html">AV + Tools</a><a href="https://rustinplays.shop">Merch</a></nav>
+    <nav aria-label="Footer navigation"><a href="index.html">Home</a><a class="is-active" href="creative.html">Creative Work</a><a href="lighting.html">Lighting</a><a href="av.html">AV + Tools</a><a href="merch.html">Merch</a></nav>
     <a class="footer-booking" href="booking.html?type=booking&amp;service=Photography">Enquire / Book</a>
     <p class="footer-copyright">&copy; 2026 Justin Creative. All rights reserved.</p>
   </footer>

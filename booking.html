@@ -11,13 +11,121 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800;900&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script src="site-config.js" defer></script><script src="script.js" defer></script>
+  <!-- Search and sharing metadata -->
+  <link rel="canonical" href="https://justincreative.tech/booking" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Justin Creative" />
+  <meta property="og:locale" content="en_NZ" />
+  <meta property="og:title" content="Enquire / Book — Justin Creative" />
+  <meta property="og:description" content="Book Justin Creative for photography, videography, video editing, graphic design, event lighting and AV technical support in Auckland." />
+  <meta property="og:url" content="https://justincreative.tech/booking" />
+  <meta property="og:image" content="https://justincreative.tech/assets/branding/social-card.png" />
+  <meta property="og:image:secure_url" content="https://justincreative.tech/assets/branding/social-card.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Justin Creative: creative work, technical thinking. Photography, video, design, lighting and AV in Auckland." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Enquire / Book — Justin Creative" />
+  <meta name="twitter:description" content="Book Justin Creative for photography, videography, video editing, graphic design, event lighting and AV technical support in Auckland." />
+  <meta name="twitter:image" content="https://justincreative.tech/assets/branding/social-card.png" />
+  <meta name="twitter:image:alt" content="Justin Creative: creative work, technical thinking. Photography, video, design, lighting and AV in Auckland." />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://justincreative.tech/#organization",
+      "name": "Justin Creative",
+      "url": "https://justincreative.tech/",
+      "email": "Justin.Oshea135@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://justincreative.tech/assets/branding/justin-creative-wordmark.png",
+        "width": 2172,
+        "height": 724
+      },
+      "image": "https://justincreative.tech/assets/branding/social-card.png",
+      "description": "Photography, video, graphic design, event lighting and AV technical support in Auckland, New Zealand.",
+      "founder": {
+        "@id": "https://justincreative.tech/#justin"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Auckland, New Zealand"
+        },
+        {
+          "@type": "Place",
+          "name": "Hibiscus Coast, New Zealand"
+        },
+        {
+          "@type": "Place",
+          "name": "North Shore, Auckland, New Zealand"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/justin.oshea_creative/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://justincreative.tech/#justin",
+      "name": "Justin O'Shea",
+      "url": "https://justincreative.tech/#about-title",
+      "image": "https://justincreative.tech/assets/images/Justin.png",
+      "jobTitle": "Creative designer and AV technician",
+      "worksFor": {
+        "@id": "https://justincreative.tech/#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://justincreative.tech/#website",
+      "url": "https://justincreative.tech/",
+      "name": "Justin Creative",
+      "publisher": {
+        "@id": "https://justincreative.tech/#organization"
+      },
+      "inLanguage": "en-NZ"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://justincreative.tech/booking#webpage",
+      "url": "https://justincreative.tech/booking",
+      "name": "Enquire / Book — Justin Creative",
+      "description": "Book Justin Creative for photography, videography, video editing, graphic design, event lighting and AV technical support in Auckland.",
+      "isPartOf": {
+        "@id": "https://justincreative.tech/#website"
+      },
+      "about": {
+        "@id": "https://justincreative.tech/#organization"
+      },
+      "inLanguage": "en-NZ",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://justincreative.tech/assets/branding/social-card.png",
+        "width": 1200,
+        "height": 630,
+        "caption": "Justin Creative: creative work, technical thinking. Photography, video, design, lighting and AV in Auckland."
+      }
+    }
+  ]
+}
+  </script>
+  <!-- End search and sharing metadata -->
 </head>
 <body data-page="booking">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header is-solid" data-header>
     <a class="brand" href="index.html" aria-label="Justin Creative home"><img src="assets/branding/justin-creative-wordmark.png" alt="Justin Creative" width="2172" height="724" /></a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span class="sr-only">Open navigation</span></button>
-    <nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a href="index.html#creative">Creative</a><a href="lighting.html">Lighting</a><a href="av.html">AV + Tools</a><a href="https://rustinplays.shop">Merch</a></nav>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <div class="nav-creative"><a href="creative.html">Creative Work</a><details class="creative-dropdown"><summary aria-label="Creative Work pages"><span aria-hidden="true">⌄</span></summary><div class="creative-menu"><a href="photography.html">Photography</a><a href="videography.html">Video &amp; Editing</a><a href="creative.html#design">Graphic Design</a></div></details></div>
+      <a href="lighting.html">Lighting</a><a href="av.html">AV + Tools</a><a class="nav-booking" href="booking.html">Enquire / Book</a>
+    </nav>
     <a class="header-cta is-active" href="booking.html">Enquire / Book</a>
   </header>
 
@@ -71,7 +179,7 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="footer-content"><div class="footer-note"><img src="assets/branding/creative-mark.png" alt="" aria-hidden="true" /><p><strong>Justin Creative</strong><span>Creative work, kept honest.</span></p></div><div class="footer-info"><p><strong>Auckland, New Zealand</strong><br />Hibiscus Coast &amp; North Shore</p><p><a href="mailto:Justin.Oshea135@gmail.com">Justin.Oshea135@gmail.com</a><br /><a href="tel:+642751860656">027 518 6656</a></p><p><a href="https://www.instagram.com/justin.oshea_creative/" target="_blank" rel="noopener">Instagram</a></p></div></div><nav aria-label="Footer navigation"><a href="index.html#creative">Creative</a><a href="lighting.html">Lighting</a><a href="av.html">AV + Tools</a><a href="https://rustinplays.shop">Merch</a></nav><a class="footer-booking" href="booking.html">Enquire / Book</a><p class="footer-copyright">&copy; 2026 Justin Creative. All rights reserved.</p></footer>
+  <footer class="site-footer"><div class="footer-content"><div class="footer-note"><img src="assets/branding/creative-mark.png" alt="" aria-hidden="true" /><p><strong>Justin Creative</strong><span>Creative work, kept honest.</span></p></div><div class="footer-info"><p><strong>Auckland, New Zealand</strong><br />Hibiscus Coast &amp; North Shore</p><p><a href="mailto:Justin.Oshea135@gmail.com">Justin.Oshea135@gmail.com</a><br /><a href="tel:+64275186656">027 518 6656</a></p><p><a href="https://www.instagram.com/justin.oshea_creative/" target="_blank" rel="noopener">Instagram</a></p></div></div><nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="creative.html">Creative Work</a><a href="lighting.html">Lighting</a><a href="av.html">AV + Tools</a><a href="merch.html">Merch</a></nav><a class="footer-booking" href="booking.html">Enquire / Book</a><p class="footer-copyright">&copy; 2026 Justin Creative. All rights reserved.</p></footer>
   <script>window.formspree=window.formspree||function(){(formspree.q=formspree.q||[]).push(arguments);};formspree('initForm',{formElement:'#booking-form',formId:'xaeyjbve'});</script>
   <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
