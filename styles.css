@@ -179,7 +179,7 @@ fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
 .form-grid-two { grid-template-columns: repeat(2, 1fr); }
 #booking-form label { position: relative; display: grid; gap: .5rem; font-size: .82rem; font-weight: 600; }
 #booking-form label > small { position: absolute; top: 0; right: 0; color: var(--muted); font-size: .66rem; font-weight: 400; }
-#booking-form input[type="text"], #booking-form input[type="email"], #booking-form input[type="tel"], #booking-form input[type="date"], #booking-form select, #booking-form textarea { width: 100%; padding: .7rem 0; color: var(--ink); border: 0; border-bottom: 1px solid var(--ink); border-radius: 0; background: transparent; }
+#booking-form input[type="text"], #booking-form input[type="email"], #booking-form input[type="tel"], #booking-form input[type="date"], #booking-form select, #booking-form textarea { width: 100%; min-width: 0; min-height: 44px; padding: .7rem .8rem; color: var(--ink); border: 0; border-bottom: 1px solid var(--ink); border-radius: 0; background: #e9eded; font-size: 1rem; }
 #booking-form textarea { min-height: 8rem; padding: .8rem; border: 1px solid var(--line); resize: vertical; }
 #booking-form input:focus, #booking-form select:focus, #booking-form textarea:focus { outline: 0; border-color: var(--cyan-dark); box-shadow: 0 2px 0 var(--cyan-dark); }
 .purpose-fields { display: grid; gap: 2rem; }
