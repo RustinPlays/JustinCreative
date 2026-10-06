@@ -1,0 +1,134 @@
+/* AV tools card grid
+   Loaded automatically by script.js anywhere [data-tool-list] is used.
+*/
+
+.tool-list {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  margin-top: 2rem;
+}
+
+.tool-card {
+  min-width: 0;
+  min-height: 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  padding: clamp(1.35rem, 2vw, 1.8rem);
+  border: 1px solid var(--line);
+  background: var(--soft);
+  color: var(--ink);
+  text-decoration: none;
+  transition:
+    transform .18s ease,
+    border-color .18s ease,
+    background .18s ease,
+    box-shadow .18s ease;
+}
+
+.tool-card:hover,
+.tool-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--cyan-dark);
+  background: white;
+  box-shadow: 0 1rem 2.5rem rgba(5, 5, 5, .09);
+}
+
+.tool-card-number {
+  color: var(--cyan-dark);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+}
+
+.tool-card-copy {
+  flex: 1;
+}
+
+.tool-card h3 {
+  margin: 0;
+  font-size: clamp(1.65rem, 2.35vw, 2.6rem);
+  line-height: 1;
+}
+
+.tool-card p {
+  max-width: 34rem;
+  margin: .75rem 0 0;
+  color: var(--muted);
+  font-size: .98rem;
+  line-height: 1.5;
+}
+
+.tool-card-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: .85rem;
+  border-top: 1px solid var(--line);
+  font-weight: 700;
+}
+
+.tool-card.is-coming {
+  opacity: .7;
+}
+
+/* Homepage blue tools section */
+.tools-section .tool-card {
+  color: white;
+  border-color: rgba(255, 255, 255, .48);
+  background: rgba(5, 5, 5, .13);
+  backdrop-filter: blur(4px);
+}
+
+.tools-section .tool-card:hover,
+.tools-section .tool-card:focus-visible {
+  border-color: white;
+  background: rgba(5, 5, 5, .23);
+  box-shadow: 0 1rem 2.5rem rgba(5, 5, 5, .13);
+}
+
+.tools-section .tool-card-number {
+  color: white;
+}
+
+.tools-section .tool-card p {
+  color: rgba(255, 255, 255, .8);
+}
+
+.tools-section .tool-card-action {
+  border-top-color: rgba(255, 255, 255, .42);
+}
+
+/* AV hero quick-jump button */
+.av-hero-actions {
+  margin-top: 2rem;
+}
+
+.av-page-hero .av-hero-actions .button-line {
+  color: white;
+  border-color: white;
+}
+
+.av-tools-section {
+  scroll-margin-top: 1.5rem;
+}
+
+@media (max-width: 1050px) {
+  .tool-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .tool-list {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-card {
+    min-height: 0;
+  }
+}

@@ -68,13 +68,38 @@ if ("IntersectionObserver" in window) {
 
 const toolList = document.querySelector("[data-tool-list]");
 if (toolList) {
+  if (!document.querySelector('link[data-tools-grid-styles]')) {
+    const toolsStyles = document.createElement("link");
+    toolsStyles.rel = "stylesheet";
+    toolsStyles.href = "tools-grid.css";
+    toolsStyles.dataset.toolsGridStyles = "";
+    document.head.appendChild(toolsStyles);
+  }
+
   const tools = window.JUSTIN_SITE?.tools || [];
   toolList.innerHTML = tools.map((tool, index) => {
     const number = String(index + 1).padStart(2, "0");
-    const action = tool.url
-      ? `<a href="${tool.url}" target="_blank" rel="noopener">Open tool <span aria-hidden="true">↗</span></a>`
-      : `<span class="tool-coming">Link coming</span>`;
-    return `<article class="tool-row"><span>${number}</span><div><h3>${tool.name}</h3><p>${tool.description}</p></div>${action}</article>`;
+    const description = tool.description ? `<p>${tool.description}</p>` : "";
+
+    if (tool.url) {
+      return `<a class="tool-card" href="${tool.url}" target="_blank" rel="noopener">
+        <span class="tool-card-number">${number}</span>
+        <div class="tool-card-copy">
+          <h3>${tool.name}</h3>
+          ${description}
+        </div>
+        <span class="tool-card-action">Open tool <span aria-hidden="true">↗</span></span>
+      </a>`;
+    }
+
+    return `<article class="tool-card is-coming">
+      <span class="tool-card-number">${number}</span>
+      <div class="tool-card-copy">
+        <h3>${tool.name}</h3>
+        ${description}
+      </div>
+      <span class="tool-card-action">Link coming</span>
+    </article>`;
   }).join("");
 }
 
