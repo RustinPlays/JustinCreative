@@ -3,7 +3,7 @@ window.JUSTIN_SITE = {
     {
       name: "AV Timer",
       description: "Run fullscreen timers, warnings and queued countdowns.",
-      url: "https://rustinplays.github.io/AV-Timer/"
+      url: "https://timer.justincreative.tech/"
     },
     {
       name: "CueTime",
