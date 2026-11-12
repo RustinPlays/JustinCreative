@@ -1,39 +1,29 @@
-JUSTIN CREATIVE — AV TOOLS HERO BUTTON
-Ready-to-upload website update. NO PYTHON REQUIRED.
+JUSTIN CREATIVE - AV TOOLS HOMEPAGE BUTTON (NO PYTHON)
+====================================================
+This update modifies ONLY the main homepage index.html file.
+It comes directly from the GitHub main branch as checked on 13 November 2026.
 
-Source: Current main branch of https://github.com/RustinPlays/JustinCreative
+CHANGES
+- The existing What I do and Start a project buttons are kept.
+- AV Tools sits directly beside them in the hero row on desktop.
+- AV Tools opens downloads.html (justincreative.tech/downloads).
+- Smaller screens stack the three hero buttons cleanly.
+- Does not require any edits to site-config.js or styles.css.
 
-WHAT THIS DOES
-Adds an AV Tools button directly beside the existing "What I do" and
-"Start a project" buttons in the home page hero. It has exactly the same
-outline button styling as "Start a project" and links to downloads.html
-(https://justincreative.tech/downloads).
+INSTALL
+1. Open https://github.com/RustinPlays/JustinCreative
+2. Click the index.html file (in the repository root).
+3. Click the pencil/edit icon.
+4. Easier alternative: delete the old index.html in your GitHub file editor,
+   then add/upload the new index.html at the root of main.
+   Be sure to use the same filename, not a nested folder.
+5. Commit the change to main.
+6. Cloudflare Pages > your website project > Deployments: check the latest
+   production deployment has finished successfully for the new commit.
+7. Reload https://justincreative.tech/ with Ctrl+Shift+R.
 
-FILES TO REPLACE AT THE GITHUB REPOSITORY ROOT
-  index.html       - updated homepage with AV Tools button in HTML
-  site-config.js   - same existing tool listings; removes old JS button
-                     insertion so the homepage does not rely on it
-
-Nothing else needs to be replaced. The existing downloads.html and
-admin/index.html pages were already present in the repository when this
-package was made. These files and the shared site styles remain unchanged.
-
-TO UPLOAD
-1. Extract this ZIP on your computer.
-2. Open https://github.com/RustinPlays/JustinCreative
-3. Replace index.html and site-config.js in the main/root folder with
-   the two files in this ZIP, and commit the changes.
-   You can use GitHub's Add file > Upload files if it accepts replacement
-   files, or open each existing file and use Edit (pencil) to replace
-   its contents before committing.
-4. If Cloudflare Pages auto-deploys from GitHub, wait for its deployment
-   to complete. Otherwise deploy the latest main branch.
-5. Visit https://justincreative.tech and hard-refresh (Ctrl+F5).
-6. Click AV Tools, which should open your Tools & Downloads page.
-
-NOTE
-This package does not add a working secure admin login. The existing
-/admin page remains a placeholder. Windows application downloads are
-not added until the actual build files are available.
-
-Changes limited to the two files above; no Python scripts or installs.
+IMPORTANT
+- Upload index.html to the top level beside styles.css, not to /admin/ or /assets/.
+- If GitHub shows the new AV Tools link but the live site still does not,
+  check which Cloudflare Pages project/repo/branch the custom domain is using.
+- No changes are needed in Cloudflare DNS for /downloads.

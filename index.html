@@ -117,6 +117,36 @@
 }
   </script>
   <!-- End search and sharing metadata -->
+
+  <!-- Hero buttons: keep AV Tools beside the original two buttons on desktop. -->
+  <style>
+    body[data-page="home"] .home-hero .hero-actions {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .65rem;
+      max-width: 42rem;
+      width: 100%;
+    }
+    body[data-page="home"] .home-hero .hero-actions > .button {
+      box-sizing: border-box;
+      min-width: 0;
+      width: 100%;
+      padding: 1rem .7rem;
+      gap: .45rem;
+      white-space: nowrap;
+      font-size: clamp(.76rem, 1vw, .95rem);
+    }
+    @media (max-width: 760px) {
+      body[data-page="home"] .home-hero .hero-actions {
+        grid-template-columns: 1fr;
+        max-width: 24rem;
+      }
+      body[data-page="home"] .home-hero .hero-actions > .button {
+        font-size: .95rem;
+        padding: 1rem 1.15rem;
+      }
+    }
+  </style>
 </head>
 <body data-page="home">
   <a class="skip-link" href="#main">Skip to content</a>
