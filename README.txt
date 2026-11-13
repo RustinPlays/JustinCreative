@@ -1,18 +1,10 @@
-JUSTIN CREATIVE — CLEANUP BUILD (13 NOV 2026)
+# Justin Creative website
 
-Upload ALL files and folders from this directory to the root of RustinPlays/JustinCreative (main branch). Preserve the same folder structure.
+Static Cloudflare Pages website deployed from `RustinPlays/JustinCreative` on `main`.
 
-Homepage: See What I Do and AV Tools. Top header: Book / Enquire.
-All public pages have consistent Events / Downloads navigation and an Admin access link in the footer.
-Downloads is driven by site-config.js and downloads.js; only verified web URLs are shown.
+- Admin editor: `https://justincreative.tech/admin/`
+- Admin configuration: `admin/config.yml`
+- GitHub OAuth server functions: `functions/api/auth.js` and `functions/api/callback.js`
+- See `ADMIN-SETUP.md` for GitHub OAuth and Cloudflare configuration.
 
-IMPORTANT: admin.justincreative.tech is a SEPARATE Cloudflare Pages project.
-See ADMIN_SETUP.md provided alongside the ZIP for separate admin deployment and OAuth credentials.
-Do not upload the admin deployment folder into the public repository.
-
-The former /admin/ path redirects to the subdomain.
-The public repository no longer contains the OAuth Pages Functions.
-No existing photos or user content were intentionally removed.
-
-Testing: local static paths and JavaScript parsing checked; browser visual test unavailable due to browser environment restriction.
-GitHub login, real image uploads and Cloudflare deployment require live environment testing.
+Use Cloudflare **Pages** for the main site; Workers Builds is a separate project. Cloudflare Pages Functions need a Git-connected Pages deployment (or compatible Wrangler deployment) to work.

@@ -1,4 +1,3 @@
-# REPLACE YOUR-WORKER-NAME below after deploying the Cloudflare OAuth Worker.
 backend:
   name: github
   repo: RustinPlays/JustinCreative
