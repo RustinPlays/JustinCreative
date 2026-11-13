@@ -1,32 +1,18 @@
-JUSTIN CREATIVE - AV TOOLS HOMEPAGE BUTTON (NO PYTHON)
+JUSTIN CREATIVE — CLEANUP BUILD (13 NOV 2026)
 
-<!-- Trigger Cloudflare Pages deployment -->
+Upload ALL files and folders from this directory to the root of RustinPlays/JustinCreative (main branch). Preserve the same folder structure.
 
-====================================================
-This update modifies ONLY the main homepage index.html file.
-It comes directly from the GitHub main branch as checked on 13 November 2026.
+Homepage: See What I Do and AV Tools. Top header: Book / Enquire.
+All public pages have consistent Events / Downloads navigation and an Admin access link in the footer.
+Downloads is driven by site-config.js and downloads.js; only verified web URLs are shown.
 
-CHANGES
-- The existing What I do and Start a project buttons are kept.
-- AV Tools sits directly beside them in the hero row on desktop.
-- AV Tools opens downloads.html (justincreative.tech/downloads).
-- Smaller screens stack the three hero buttons cleanly.
-- Does not require any edits to site-config.js or styles.css.
+IMPORTANT: admin.justincreative.tech is a SEPARATE Cloudflare Pages project.
+See ADMIN_SETUP.md provided alongside the ZIP for separate admin deployment and OAuth credentials.
+Do not upload the admin deployment folder into the public repository.
 
-INSTALL
-1. Open https://github.com/RustinPlays/JustinCreative
-2. Click the index.html file (in the repository root).
-3. Click the pencil/edit icon.
-4. Easier alternative: delete the old index.html in your GitHub file editor,
-   then add/upload the new index.html at the root of main.
-   Be sure to use the same filename, not a nested folder.
-5. Commit the change to main.
-6. Cloudflare Pages > your website project > Deployments: check the latest
-   production deployment has finished successfully for the new commit.
-7. Reload https://justincreative.tech/ with Ctrl+Shift+R.
+The former /admin/ path redirects to the subdomain.
+The public repository no longer contains the OAuth Pages Functions.
+No existing photos or user content were intentionally removed.
 
-IMPORTANT
-- Upload index.html to the top level beside styles.css, not to /admin/ or /assets/.
-- If GitHub shows the new AV Tools link but the live site still does not,
-  check which Cloudflare Pages project/repo/branch the custom domain is using.
-- No changes are needed in Cloudflare DNS for /downloads.
+Testing: local static paths and JavaScript parsing checked; browser visual test unavailable due to browser environment restriction.
+GitHub login, real image uploads and Cloudflare deployment require live environment testing.
