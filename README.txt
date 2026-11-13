@@ -1,4 +1,7 @@
 JUSTIN CREATIVE - AV TOOLS HOMEPAGE BUTTON (NO PYTHON)
+
+<!-- Trigger Cloudflare Pages deployment -->
+
 ====================================================
 This update modifies ONLY the main homepage index.html file.
 It comes directly from the GitHub main branch as checked on 13 November 2026.
