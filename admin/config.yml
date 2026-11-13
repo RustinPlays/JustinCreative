@@ -1,0 +1,61 @@
+# REPLACE YOUR-WORKER-NAME below after deploying the Cloudflare OAuth Worker.
+backend:
+  name: github
+  repo: RustinPlays/JustinCreative
+  branch: main
+  base_url: https://justincreative.tech
+  auth_endpoint: api/auth
+  site_domain: justincreative.tech
+
+publish: true
+media_folder: assets/events
+public_folder: /assets/events
+media_library:
+  name: default
+  config:
+    max_file_size: 8000000
+
+collections:
+  - name: website
+    label: Website Content
+    files:
+      - name: events
+        label: Events & Photos
+        file: content/events.json
+        format: json
+        fields:
+          - label: Events
+            name: events
+            widget: list
+            summary: '{{fields.title}} — {{fields.date}}'
+            fields:
+              - {label: Event Name, name: title, widget: string}
+              - {label: Date, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, format: YYYY-MM-DD}
+              - {label: Category, name: category, widget: select, options: [Live Music, Corporate, Lighting, AV Production, Photography, Other]}
+              - {label: Venue / Location, name: venue, widget: string, required: false}
+              - {label: My Role, name: role, widget: string, required: false, hint: 'For example: Lighting design, audio technician and show operation'}
+              - {label: Description, name: description, widget: text, required: false}
+              - {label: Cover Photo, name: cover, widget: image, required: false}
+              - label: Gallery Photos
+                name: photos
+                widget: list
+                required: false
+                summary: '{{fields.caption}}'
+                fields:
+                  - {label: Photo, name: image, widget: image}
+                  - {label: Caption, name: caption, widget: string, required: false}
+              - {label: Published on Website, name: published, widget: boolean, default: true}
+      - name: testimonials
+        label: Testimonials
+        file: content/testimonials.json
+        format: json
+        fields:
+          - label: Client Testimonials
+            name: testimonials
+            widget: list
+            summary: '{{fields.name}}'
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Role / Event, name: role, widget: string, required: false}
+              - {label: Testimonial, name: quote, widget: text}
+              - {label: Published on Website, name: published, widget: boolean, default: true}
