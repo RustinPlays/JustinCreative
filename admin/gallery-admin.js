@@ -11,6 +11,31 @@ async function refresh(id){let d=await api('manage');all=d.events||[];all.sort((
 async function saveEvent(){setBusy(true);try{let d=await api('manage',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(fields())});await refresh(d.event.id);msg('Event saved successfully.');return true;}catch(e){msg('Save failed: '+e.message);return false;}finally{setBusy(false)}}
 $('new').onclick=clearForm;$('save').onclick=saveEvent;
 $('delete').onclick=async()=>{if(!selected?.id||!confirm('Delete this event? Photos will remain in R2 for manual cleanup.'))return;setBusy(true);try{await api('manage',{method:'DELETE',headers:{'content-type':'application/json'},body:JSON.stringify({id:selected.id})});selected=null;await refresh();draw();}catch(e){msg(e.message)}finally{setBusy(false)}};
-$('upload').onclick=async()=>{if(!selected)return;if(!selected.id){if(!await saveEvent())return;}let files=[...$('files').files];if(!files.length){msg('Choose photos first.');return;}if(files.length>500){msg('Select 500 photos or fewer per batch.');return;}setBusy(true);let done=0;for(const file of files){try{let f=new FormData();f.append('eventId',selected.id);f.append('file',file);let d=await api('upload',{method:'POST',body:f});selected=d.event;done++;$('progress').value=Math.round(100*done/files.length);$('upload-status').textContent=`${done} / ${files.length}`;}catch(e){msg(`Stopped on ${file.name}: ${e.message}`);break;}}$('files').value='';setBusy(false);try{await refresh(selected.id)}catch(e){msg(e.message)}if(done===files.length)msg(`Uploaded ${done} photos successfully.`);};
-refresh().catch(e=>msg('Connection unavailable: '+e.message+' — check Cloudflare Access, R2 binding and Pages Functions.'));
+$('upload').onclick=async()=>{
+  if(!selected)return;
+  if(!selected.id && !await saveEvent())return;
+  const files=[...$('files').files];
+  if(!files.length){msg('Choose photos first.');return;}
+  if(files.length>500){msg('Select 500 photos or fewer per batch.');return;}
+  if(typeof window.JCPhotoPrep?.prepare!=='function'){msg('Photo optimiser missing. Ensure photo-prep.js was uploaded.');return;}
+  setBusy(true);let done=0;let errors=[];
+  $('progress').value=0;
+  for(const original of files){
+    try{
+      let result=await window.JCPhotoPrep.prepare(original, s=>msg(s));
+      let f=new FormData();f.append('eventId',selected.id);f.append('file',result.file);
+      msg(`Uploading ${original.name} (${done+1}/${files.length})…`);
+      let d=await api('upload',{method:'POST',body:f});
+      selected=d.event;done++;
+      $('progress').value=Math.round(100*(done+errors.length)/files.length);
+      $('upload-status').textContent=`${done} uploaded / ${files.length} selected — ${result.note}`;
+      msg(`${original.name}: ${result.note}`);
+    }catch(e){errors.push(`${original.name}: ${e.message}`);msg(`Failed: ${original.name} — ${e.message}`);$('progress').value=Math.round(100*(done+errors.length)/files.length);}
+  }
+  $('files').value='';setBusy(false);
+  try{await refresh(selected.id)}catch(e){errors.push(`Refresh: ${e.message}`)}
+  if(errors.length){msg(`${done}/${files.length} uploaded; ${errors.length} failed. ${errors.slice(0,3).join(' | ')}`);$('upload-status').textContent=`${done} uploaded; ${errors.length} failed. Select the failed files to retry.`;}
+  else {msg(`Uploaded ${done} photos successfully. Original local files were not changed.`);$('upload-status').textContent=`${done}/${files.length} uploaded`}
+};
+refresh().catch(e=>msg('Connection unavailable: '+e.message+' — check the R2 binding and Pages Functions.'));
 })();
