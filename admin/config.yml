@@ -8,10 +8,6 @@ backend:
 publish: true
 media_folder: assets/events
 public_folder: /assets/events
-media_library:
-  name: default
-  config:
-    max_file_size: 8000000
 collections:
   - name: website
     label: Website Content (GitHub)
